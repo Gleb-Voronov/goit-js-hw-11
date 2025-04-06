@@ -1,22 +1,30 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-  
-export function showLoader() {
-  document.getElementById('loader').classList.add('show');
-}
 
-export function hideLoader() {
-  document.getElementById('loader').classList.remove('show');
-}
+const gallery = document.querySelector('.gallery');
+const loader = document.querySelector('.loader');
 
-let lightbox;
+let lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
 export function createGallery(images) {
-  const gallery = document.querySelector('.gallery');
-  const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
-    <li class="gallery-item">
-      <a href="${largeImageURL}">
-        <img  class="img" src="${webformatURL}" alt="${tags}" />
+  const markup = images
+    .map(
+      ({
+        webformatURL,
+        largeImageURL,
+        tags,
+        likes,
+        views,
+        comments,
+        downloads,
+      }) => `
+      <li class="gallery-item">
+        <a href="${largeImageURL}">
+          <img class="img" src="${webformatURL}" alt="${tags}" />
+        </a>
          <ul class="statistic-list">
       <li class="statistic-item">
         <p class="statistic-text">Likes</p>
@@ -38,15 +46,18 @@ export function createGallery(images) {
       </a>
     </li>
   `).join('');
-  gallery.innerHTML = markup;
-
-  if (lightbox) {
-    lightbox.refresh();
-  } else {
-    lightbox = new SimpleLightbox('.gallery a');
-  }
+   gallery.insertAdjacentHTML('beforeend', markup);
+  lightbox.refresh();
 }
 
 export function clearGallery() {
-  document.querySelector('.gallery').innerHTML = '';
+  gallery.innerHTML = '';
+}
+
+export function showLoader() {
+  loader.classList.remove('is-hidden');
+}
+
+export function hideLoader() {
+  loader.classList.add('is-hidden');
 }
