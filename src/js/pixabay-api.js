@@ -16,3 +16,4 @@ export const getImagesByQuery = async (query) => {
 
   return response.data;
 };
+
