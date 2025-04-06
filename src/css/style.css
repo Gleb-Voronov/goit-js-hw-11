@@ -1,0 +1,113 @@
+.back{
+    margin-right: 50px;
+}
+button {
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin-left: 8px;
+        width: 75px;
+        height: 40px;
+        background-color: #4e75ff;
+        font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #fff;
+}
+
+
+button:disabled {
+        border-radius: 8px;
+            padding: 8px 16px;
+            margin-left: 8px;
+            width: 75px;
+            height: 40px;
+            background-color: #cfcfcf;
+            cursor: not-allowed;
+                opacity: 0.5;
+                color: #989898;
+}
+
+.flatpickr-input {
+    border-radius: 4px;
+        width: 272px;
+        height: 40px;
+}
+
+
+.timer {
+    padding-top: 20px;
+    display: flex;
+    gap: 24px;
+    margin-left: 100px;
+}
+.field {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+}
+.value {
+    font-weight: 400;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+}
+.label {
+    font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+}
+
+input {
+width: 362px;
+    height: 40px;
+    display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+}
+fieldset {
+    border-radius: 4px;
+        stroke-width: 1px;
+        width: 362px;
+         height: 66px;
+            display: flex;
+                justify-content: space-around;
+                border: 1px solid #ddd;
+                padding: 10px 15px;
+                margin-top: 15px;
+                border-radius: 5px
+}
+
+input[type=radio] {
+    width: auto;
+}
+fieldset label {
+    display: flex;
+    align-items: center;
+        margin-right: 15px;
+        gap: 8px;
+        font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #2e2f42;
+    
+}
+button[type=submit] {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+        border-radius: 8px;
+            padding: 8px 16px;
+            width: 380px;
+            height: 40px;
+            margin-top: 24px;
+}
+button[type=submit]:hover {
+   background-color: #6c8cff;
+}
