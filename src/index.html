@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук зображень</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1/dist/css/iziToast.min.css">
 
-    <ul>
-        <p>
-            <li><a href="./1-timer.html">Timer</a></li>
-        </p>
-        <p>
-            <li><a href="./2-snackbar.html">Snackbar</a></li>
-        </p>
-    </ul>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2/dist/simple-lightbox.min.css">
 </head>
 
 <body>
+    <form class="form">
+        <label>
+            <input class="form-input" type="text" name="search-text" placeholder="Search images..." required>
+        </label>
+        <button class="submit" type="submit">Search</button>
+    </form>
+
+
+    <div id="loader" class="loader hidden"></div>
+
+    <div class="container">
+        <ul class="gallery"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/izitoast@1/dist/js/iziToast.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2/dist/simple-lightbox.min.js"></script>
+    <script type="module" src="main.js" defer></script>
+    <script type="module" crossorigin src="/goit-hs-hw-11/index.js"></script>
+    <script type="module" src="vendor-Db2TdIkw.js" defer></script>
 </body>
 
 </html>
