@@ -24,6 +24,9 @@ function handleSubmit(event) {
     return;
   }
 
+  showLoader();
+  clearGallery();
+  
   getImagesByQuery(usersRequest)
     .then(response => {
       const array = response.data.hits;
